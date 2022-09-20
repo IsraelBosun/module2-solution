@@ -2,66 +2,99 @@
     margin: 0;
     border: 0;
     box-sizing: border-box;
-    
 }
-body{
-    margin: 200px 20px;
-}
-.table1{
-    width: 450px;
-    height: 169px;
-    border: 2px solid black;
-    background-color: aquamarine;
-    font-family: 'Source Sans Pro', sans-serif;
-}
-.chicken{
-    width: 150px;
-    height: 25px;
-    /* border: 2px solid black; */
-    border-left: 2px solid black;
-    border-right: 2px solid black;
-    border-bottom: 2px solid black;
-    font-family: 'Gabriela', serif;
-    display: block;
-    position: relative;
-    top: .01px;
-    left: 298px;
-    text-align: center;
-    font-size: 20px;
+header{
+    margin: 90px auto;
+    justify-content: center;
+    align-content: center;
 }
 .menu{
-    display: block;
-    width: 1400px;
-    /* background-color: bisque; */
+    font-size: 30px;
     text-align: center;
-    font-size: 40px;
+    margin-bottom: 70px;
+    font-family: 'Gabriela', serif;
 }
 p{
-    margin-left: 10px;
+    margin: 40px 10px 5px 10px;
+    font-family: 'Source Sans Pro', sans-serif;
 }
-.flexing{
-    display: flex;
-    justify-content: space-between;
-    margin-top: 80px;
+body{
+    margin: 20px 20px;
 }
-#chick{
-    background-color: purple;
+.bane{
+    margin: 0 100px 0 100px;
+    display: grid;
+    grid-template-columns: 400px 400px 400px;
+    gap: 30px;
+    justify-self: start;
+    grid-template-areas:
+            "a b x "
+            "m m u "
+            "y k z ";
+}
+.first, .second, .third{
+    margin-top: 0 auto;
+    background-color: red;
+    border: 1px solid black;
+}
+.first{
+    grid-area: ;
+    
+}
+.second{
+    background-color: yellow;
+    grid-area: ;
+    
+}
+.third{
+    background-color: green;
+    grid-area: ;
+}
+@media (min-width:768px) and (max-width: 991px){
+    .first, .second{
+        width: 90%;
+    }
+    .third {
+        grid-area: m;
+        font-size: small;
+        width: 790px;
+        height: 176px;
+        font-size: 25px;
+    } 
+}
+.chicken{
+    display: inline-block;
+    float: right;
+    /* border: 1px solid black; */
+    width: 130px;
+    height: 25px;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Gabriela', serif;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+}
+#chic{
+    background-color: green;
 }
 #beef{
-    color: white;
     background-color: red;
+    color: white;
 }
 #sushi{
     background-color: yellow;
 }
-
-@media (min-width: 768px) and (max-width: 991px){
-    #tab1, #tab2 {
-        width: 50%;
-        height: 200px;
+@media (max-width:767px){
+    .first{
+        grid-area: a;
     }
-    #tab3{
-        width: 900px%;
-
+    .second{
+        grid-area: m;
+        width: 400px;
+        height: 150.56px;
+    }
+    .third{
+        grid-area: y;
     }
 }
